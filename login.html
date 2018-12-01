@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width:device-width,initial-scale:1">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="css/01.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <header id='header' class="navbar navbar-dark navbar-expand-sm mybg">
+    </header>
+    <script>
+    Vue.directive("focus",{
+        inserted(elem){
+            elem.focus();
+        }
+    });
+</script>
+<section class="mybg3 d-flex">
+    <div id='loginfo' class="container position-relative pt-lg-5 mt-lg-5 mt-sm-3 p-sm-3">
+        <form action="/user/login" method='post' class="mt-3">
+            <h2 class="tit font-weight-bold">登录或创建账户</h2>
+            <div class='leftbox' class="d-md-flex flex-column">
+                <p class="pb-4">会员登录</p>
+                <p>
+                    <input type="text" name='uname' id='uname' placeholder='用户名' v-focus>
+                <div class="msg text-danger">*这是必填区域</div>
+                </p>
+                <p>
+                    <input type="text" name='upwd' id='upwd' placeholder='密码'>
+                <div class="msg text-danger">*这是必填区域</div>
+                </p>
+
+                <p class='rulesInfo'>
+                    <input class="" type="checkbox" name='rules' id='rules' checked><label for="rules" class="ml-2 w-75">我已经阅读并接受<a href="#" class="text-danger">个人信息收集声明</a></label>
+                <div class="msg2 text-danger">*请勾选并确保已阅读以上声明</div>
+                </p>
+                <p>
+                    <input class="btn-sm btn-dark login" type="submit" value='登录'>
+                </p>
+            </div>
+            <div class='rightbox' class="d-md-flex flex-column border-left">
+                <p class="pb-4">会员登录</p>
+                <p class="pb-2">注册会员账号以便追踪您的订单，</p>
+                <p class="pb-5">管理收货地址，获取更多个性化信息</p>
+                <p>
+                    <input class="btn-sm btn-light" type="button" value='创建账户'>
+                </p>
+            </div>
+        </form>
+        <div class="text-center txt pb-4">
+            <p class="text-light">*请妥善保管好您的账户信息,勿将账号及密码随意泄露给他人。</p>
+        </div>
+    </div>
+
+</section>
+<div id=footer class="pt-2 mybg d-flex justify-content-sm-around">
+</div>
+</div>
+ <script>
+        new Vue({
+            el:'.leftbox'
+        })
+    </script>
+<script src="js/header.js"></script>
+</body>
+</html>

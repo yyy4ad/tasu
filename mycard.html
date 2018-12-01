@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width:device-width,initial-scale:1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/01.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/01.js"></script>
+    <style>
+        table{
+            width:600px; border-collapse:collapse;
+            text-align:center;margin:0 auto;
+        }
+    td,th{border:1px solid #ccc}
+    thead td{ font-weight:bold;  height:35px; }
+    </style>
+</head>
+<body>
+    <header id="header" class="navbar navbar-dark navbar-expand-sm mybg"></header>
+	<div id="data" class="p-5">
+    
+
+    <h2>管理员列表</h2>
+	<table border="1px" width="500px">
+	  <thead>
+		<tr>
+			<th><input type="checkbox"/>全选</th>
+			<th>商品名称</th>
+			<th>价格</th>
+			<th>操作</th>
+		</tr>
+	  </thead>
+	  <tbody>
+	  	<tr>
+	  		<td><input type="checkbox"/></td>
+	  		<td>克丽丝汀迪奥悦之欢香水</td>
+	  		<td>￥1,400.00</td>
+	  		<td>修改 删除</td>
+	  	</tr>
+	  	<tr>
+	  		<td><input type="checkbox"/></td>
+	  		<td>2</td>
+	  		<td>Manager</td>
+	  		<td>修改 删除</td>
+	  	</tr>
+	  	<tr>
+	  		<td><input type="checkbox"/></td>
+	  		<td>3</td>
+	  		<td>Analyst</td>
+	  		<td>修改 删除</td>
+	  	</tr>
+	  	<tr>
+	  		<td><input type="checkbox"/></td>
+	  		<td>4</td>
+	  		<td>Admin</td>
+	  		<td>修改 删除</td>
+	  	</tr>
+	  </tbody>
+	</table>
+	<button>删除选定</button>
+    </div>
+    
+    <div id="footer" class="pt-2 mybg d-flex justify-content-sm-around"></div>
+    <script src="js/header.js"></script>
+  <script>
+	var json=[
+    {"pname":"JOY", "price":950, "age":25},
+    {"pname":"John", "salary":13000, "age":28},
+    {"pname":"Mary", "salary":12000, "age":25}
+  ];
+  //删除22~75行
+  var table=document.createElement("table");
+  var thead=table.createTHead();
+  var tr=thead.insertRow();
+  for(var key in json[0]){
+    tr.insertCell().innerHTML=key;
+            //  td 
+  }
+  tr.insertCell().innerHTML="操作";
+  var tbody=table.createTBody();
+  for(var emp of json){
+    var tr=tbody.insertRow();//.insertRow(0)
+    for(var key in emp){
+      tr.insertCell().innerHTML=emp[key];
+            //  td
+    }
+    var btn=document.createElement("button");
+    btn.innerHTML="x";
+    /*btn.onclick=function(){
+      var btn=this;
+      var tr=btn.parentNode.parentNode;
+      var ename=tr.cells[0].innerHTML;
+      if(confirm("是否继续删除 "+ename+"?"))
+        table.deleteRow(tr.rowIndex);
+    }*/
+    tr.insertCell().appendChild(btn);
+            //  td 
+  }
+  table.onclick=function(e){
+    if(e.target.nodeName==="BUTTON"){
+      var btn=e.target;
+      var tr=btn.parentNode.parentNode;
+      var ename=tr.cells[0].innerHTML;
+      if(confirm("是否继续删除 "+ename+"?"))
+        table.deleteRow(tr.rowIndex);
+    }
+  }
+  document.getElementById("data")
+          .appendChild(table);
+  </script>
+</body>
+</html>
