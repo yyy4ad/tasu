@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width:device-width,initial-scale:1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/01.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <header id="header" class="navbar navbar-dark navbar-expand-sm mybg">
+    </header>
+<div class="mymt">
+    <section class="bg-dark">
+        <div id="bimg" class="carousel m-auto" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/seven.jpg" class="w-100 " style="height:100%" alt="" v-model></div>
+                <div class="carousel-item"><img src="img/elev.jpg" class="w-100" alt=""></div>
+                <div class="carousel-item"><img src="img/five.jpg" class="w-100" alt=""></div>
+                <div class="carousel-item"><img src="img/eleven.jpg" class="w-100" alt=""></div>
+            </div>
+            <ul class="carousel-indicators">
+                <li class="active" data-target="#bimg" data-slide-to="0"></li>
+                <li data-target="#bimg" data-slide-to="1"></li>
+                <li data-target="#bimg" data-slide-to="2"></li>
+                <li data-target="#bimg" data-slide-to="3"></li>
+            </ul>
+            <a class="carousel-control-prev" data-slide="prev" href="#bimg"><span class="carousel-control-prev-icon"></span></a>
+            <a class="carousel-control-next" data-slide="next" href="#bimg"><span class="carousel-control-next-icon"></span></a>
+        </div>
+        <!--mimg-->
+        <div id="mimg">
+        <video class="w-100" autoplay="autoplay" loop="loop">
+            <source src="img/20180903140420_1280x720_2345_8f85f393-8264-480e-ae56-7ea6c663aeda.mp4" type="video/mp4">
+        </video>
+        </div>
+        <!--simg-->
+        <div id="simg" class="carousel m-auto" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/purm.jpg" class="w-100" alt=""></div>
+                <div class="carousel-item"><img src="img/women.jpg" class="w-100" alt=""></div>
+                <div class="carousel-item"><img src="img/men2.jpg" class="w-100" alt=""></div>
+                <div class="carousel-item"><img src="img/men.jpg" class="w-100" alt=""></div>
+            </div>
+            <ul class="carousel-indicators">
+                <li class="active" data-target="#simg" data-slide-to="0"></li>
+                <li data-target="#simg" data-slide-to="1"></li>
+                <li data-target="#simg" data-slide-to="2"></li>
+                <li data-target="#simg" data-slide-to="3"></li>
+            </ul>
+            <a class="carousel-control-prev" data-slide="prev" href="#simg"><span class="carousel-control-prev-icon"></span></a>
+            <a class="carousel-control-next" data-slide="next" href="#simg"><span class="carousel-control-next-icon"></span></a>
+        </div>
+    </section>
+    <div id='footer' class="pt-2 mybg d-flex justify-content-sm-around">
+    </div>
+</div>
+<script src="js/header.js"></script>
+<script src="js/01.js"></script>
+</body>
+</html>
