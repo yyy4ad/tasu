@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset='utf-8'>
+		<style>
+		*{
+			margin:0;padding:0;
+		}
+			.nav{
+				height:50px;
+				background:#000;
+				color:#fff;
+			}
+			.mbox{
+				margin:0 auto;
+				height:50px;
+				line-height:50px;
+				display:flex;
+				justify-content:space-around;
+				overflow:hidden;
+			}
+			ul{
+				list-style:none;
+			}
+			.mleft{
+				width: 40%;
+				display:flex;
+				justify-content:space-around;
+				flex-wrap:wrap;
+			}
+			.mright{
+				width: 30%;
+				height: 50px;
+				display:flex;
+				justify-content:flex-end;
+				flex-wrap:wrap;
+			}
+			a{
+				text-decoration:none;
+				color:#eee;
+				cursor:pointer;
+			}
+			a:hover{
+				color:#fff;
+			}
+			.mright>li{
+			margin-left:20px;
+			}
+			.mright>li:nth-child(1)>input{
+				height:20px;
+				padding:13px 10px;
+			}
+			.mright>li:nth-child(2){
+				display:block;
+				width: 55px;
+				height: 30px;
+				line-height:28px;
+				margin-top:12px;
+				background: linear-gradient(to bottom,#d47 0,#d56 100%);
+				text-align:center;
+				border-radius:3px;
+				margin-left:10px;
+				margin-right:25px;
+			}
+			.mright>li:nth-child(2)>a{
+				font-size:14px;
+				text-shadow:1px 2px 2px #999;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='nav'>
+			<div class='mbox'>
+				<ul class='mleft'>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">女士</a></li>
+					<li><a href="#">男士</a></li>
+					<li><a href="#">香氛</a></li>
+					<li><a href="#">彩妆</a></li>
+					<li><a href="#">护肤</a></li>
+					<li><a href="#">珠宝</a></li>
+					<li><a href="#">腕表</a></li>
+					<li><a href="#">BABY DIOR</a></li>
+				</ul>
+				<ul class='mright'>
+					<li><input type="search" size='10' id='search' name='search' placeholder='请输入关键字'></li>
+					<li><a href='#'>搜索</a></li>
+					<li><a href='#'>登录</a></li>
+					<li><a href='#'>注册</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
